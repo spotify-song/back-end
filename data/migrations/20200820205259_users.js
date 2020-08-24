@@ -2,9 +2,11 @@ exports.up = function (knex) {
   return knex.schema
     .createTable("users", (table) => {
       table.increments();
-      table.string("username", 255).notNullable();
+      table.string("token", 255).notNullable();
+      table.string("user_id", 255).notNullable();
+      table.string("display_name", 255).notNullable();
     })
-    .createTable("playlist_info", (table) => {
+    .createTable("tracks", (table) => {
       table.increments();
       table.string("user_id", 255).notNullable();
       table.float("danceability").notNullable();
@@ -18,7 +20,17 @@ exports.up = function (knex) {
       table.float("liveness").notNullable();
       table.float("tempo").notNullable();
       table.string("type", 255).notNullable();
-      table.string("uri", 255).notNullable();
+    })
+    .createTable("top-tracks", (table) => {
+      table.increments();
+      table.string("user", 255).notNullable();
+      table
+        .integer("track_id")
+        .notNullable()
+        .unsigned()
+        .references("tracks.id")
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE");
     })
     .createTable("user_playlist", (table) => {
       table.increments();
@@ -26,14 +38,13 @@ exports.up = function (knex) {
         .integer("u_id")
         .notNullable()
         .unsigned()
-        .notNullable()
         .references("users.id")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
       table
-        .integer("playlist_id")
+        .integer("tracks_id")
         .notNullable()
-        .references("playlist_info.id")
+        .references("tracks.id")
         .onUpdate("CASCADE")
         .onDelete("CASCADE");
     });
@@ -42,6 +53,7 @@ exports.up = function (knex) {
 exports.down = function (knex) {
   return knex.schema
     .dropTableIfExists("user_playlist")
-    .dropTableIfExists("playlist_info")
+    .dropTableIfExists("top-tracks")
+    .dropTableIfExists("tracks")
     .dropTableIfExists("users");
 };

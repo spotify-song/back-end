@@ -1,5 +1,5 @@
 exports.seed = function (knex) {
-  return knex("playlist_info").insert([
+  return knex("tracks").insert([
     {
       user_id: "thisissameasu",
       danceability: 0.4,
@@ -13,7 +13,6 @@ exports.seed = function (knex) {
       liveness: 6.5,
       tempo: 1.1,
       type: "related to music",
-      uri: "thisissameasuserid",
     },
     {
       user_id: "new",
@@ -28,7 +27,6 @@ exports.seed = function (knex) {
       liveness: 6.5,
       tempo: 1.1,
       type: "related to music adn more",
-      uri: "sisisisisii",
     },
     {
       user_id: "what",
@@ -43,7 +41,6 @@ exports.seed = function (knex) {
       liveness: 6.5,
       tempo: 1.1,
       type: "related",
-      uri: "nooooo",
     },
   ]);
 };
