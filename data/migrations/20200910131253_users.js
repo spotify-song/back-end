@@ -2,13 +2,11 @@ exports.up = function (knex) {
   return knex.schema
     .createTable("users", (table) => {
       table.increments();
-      table.string("user_id", 255);
       table.string("display_name", 255);
     })
 
     .createTable("tracks", (table) => {
       table.increments();
-      table.string("user_id", 255).notNullable();
       table.float("danceability").notNullable();
       table.float("energy").notNullable();
       table.integer("key").notNullable();
