@@ -1,7 +1,6 @@
 exports.seed = function (knex) {
   return knex("tracks").insert([
     {
-      user_id: "thisissameasu",
       danceability: 0.4,
       energy: 2.3,
       key: 3,
@@ -15,7 +14,6 @@ exports.seed = function (knex) {
       type: "related to music",
     },
     {
-      user_id: "new",
       danceability: 0.2,
       energy: 2.1,
       key: 34,
@@ -29,7 +27,6 @@ exports.seed = function (knex) {
       type: "related to music adn more",
     },
     {
-      user_id: "what",
       danceability: 0.2,
       energy: 2.1,
       key: 34,
