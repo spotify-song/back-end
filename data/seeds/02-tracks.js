@@ -8,10 +8,11 @@ exports.seed = function (knex) {
       mode: 2,
       speechiness: 1.3,
       acousticness: 5.5,
-      instrumentalness: "music",
+      instrumentalness: 3.2,
       liveness: 6.5,
       tempo: 1.1,
-      type: "related to music",
+
+      valence: 1.2,
     },
     {
       danceability: 0.2,
@@ -21,10 +22,11 @@ exports.seed = function (knex) {
       mode: 2,
       speechiness: 1.3,
       acousticness: 5.5,
-      instrumentalness: "music new",
+      instrumentalness: 3.2,
       liveness: 6.5,
       tempo: 1.1,
-      type: "related to music adn more",
+
+      valence: 1.2,
     },
     {
       danceability: 0.2,
@@ -34,10 +36,11 @@ exports.seed = function (knex) {
       mode: 2,
       speechiness: 1.3,
       acousticness: 5.5,
-      instrumentalness: "check this out",
+      instrumentalness: 3.2,
       liveness: 6.5,
       tempo: 1.1,
-      type: "related",
+
+      valence: 1.2,
     },
   ]);
 };

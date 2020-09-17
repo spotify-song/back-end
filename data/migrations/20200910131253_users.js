@@ -14,10 +14,10 @@ exports.up = function (knex) {
       table.integer("mode").notNullable();
       table.float("speechiness").notNullable();
       table.float("acousticness").notNullable();
-      table.string("instrumentalness", 255);
+      table.float("instrumentalness");
+      table.float("valence");
       table.float("liveness").notNullable();
       table.float("tempo").notNullable();
-      table.string("type", 255).notNullable();
     })
 
     .createTable("track_token", (table) => {
