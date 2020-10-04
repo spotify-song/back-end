@@ -3,16 +3,16 @@ const helmet = require("helmet");
 const cors = require("cors");
 const userTwoRoute = require("../routes/secondUserRoute");
 
-const server = express();
+const app = express();
 
-server.use(express.json());
-server.use(helmet());
-server.use(cors());
+app.use(express.json());
+app.use(helmet());
+app.use(cors());
 
-server.use("/usertwo", userTwoRoute);
+app.use("/usertwo", userTwoRoute);
 
-server.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.json("its running.");
 });
 
-module.exports = server;
+module.exports = app;
