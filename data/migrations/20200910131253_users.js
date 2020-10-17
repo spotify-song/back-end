@@ -30,7 +30,7 @@ exports.up = function (knex) {
       table.integer("expires_in").notNullable();
       table.string("refresh_token", 255).notNullable();
       table.string("scope", 255).notNullable();
-      table.integer("expires_at").notNullable();
+      // table.integer("expires_at").notNullable();
       table.integer("user").notNullable().references('user.id').onDelete('CASCADE').onUpdate('CASCADE');
   
     })

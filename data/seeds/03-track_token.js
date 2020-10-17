@@ -7,7 +7,7 @@ exports.seed = function (knex) {
       expires_in: 2000,
       refresh_token: "hereistherre",
       scope: "whataboutnow",
-      expires_at: 40000,
+      // expires_at: 40000,
       user: 1,
     },
   ]);
