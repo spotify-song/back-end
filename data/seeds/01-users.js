@@ -1,8 +1,9 @@
 exports.seed = function (knex) {
   // Inserts seed entries
-  return knex("users").insert([
+  return knex("user").insert([
     {
-      display_name: "new name",
+      display_name: "Anthony",
+      spot_id: 'hdhdhdhdhdhdhddhhddh'
     },
   ]);
 };
