@@ -8,8 +8,7 @@ exports.seed = function (knex) {
       refresh_token: "hereistherre",
       scope: "whataboutnow",
       expires_at: 40000,
-      user: "thiksisusernow",
-      user_id: 1,
+      user: 1,
     },
   ]);
 };

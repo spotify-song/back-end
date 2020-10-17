@@ -11,8 +11,9 @@ exports.seed = function (knex) {
       instrumentalness: 3.2,
       liveness: 6.5,
       tempo: 1.1,
-
       valence: 1.2,
+      duration_ms: 2,
+      time_signature: 10
     },
     {
       danceability: 0.2,
@@ -25,8 +26,9 @@ exports.seed = function (knex) {
       instrumentalness: 3.2,
       liveness: 6.5,
       tempo: 1.1,
-
       valence: 1.2,
+      duration_ms: 2,
+      time_signature: 10
     },
     {
       danceability: 0.2,
@@ -39,8 +41,9 @@ exports.seed = function (knex) {
       instrumentalness: 3.2,
       liveness: 6.5,
       tempo: 1.1,
-
       valence: 1.2,
+      duration_ms: 2,
+      time_signature: 10
     },
   ]);
 };
